@@ -1,0 +1,87 @@
+@spaccing: 15px;
+
+.shadow {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-container {
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: @spaccing;
+}
+
+@navbar-font-size : 0.9em;
+.select-lang {
+  margin: 0;
+  padding: 0;
+  input {
+    font-size: @navbar-font-size !important;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    color: @primary-color;
+    ::placeholder {
+      color: red;
+      opacity: 1; /* Firefox */
+    }
+  }
+
+  .ant-select-selection-item {
+    color: #000;
+    font-size: @navbar-font-size;
+  }
+  .ant-select-single.ant-select-open .ant-select-selection-item {
+    color: #000;
+  }
+  .ant-select-selection-placeholder {
+    font-size: @navbar-font-size !important;
+    color: #000;
+  }
+}
+.select-divider {
+  border-top: 1px solid #000;
+  width: 67%;
+  position: relative;
+  left: 1.4rem;
+  top: -3px;
+}
+.login-footer-nav {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+  li {
+    font-size: @navbar-font-size;
+    font-weight: 500;
+    list-style: none;
+    color: #000;
+  }
+}
+
+@media (max-width: 768px) {
+  @navbar-font-size : 0.8em;
+  .login-footer-nav {
+    gap: 0.5em;
+    li {
+      font-size: 0.8em;
+    }
+  }
+  .select-lang {
+    input {
+      font-size: @navbar-font-size !important;
+    }
+    .ant-select-selection-placeholder {
+      font-size: @navbar-font-size !important;
+    }
+  }
+}
