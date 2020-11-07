@@ -21,7 +21,7 @@ export default function Signup() {
         <Col xs={20} sm={20} md={10} lg={8} xl={8}>
           <Card className="shadow">
             <img src={AppLogo} alt="app logo" className="app-logo" />
-            <Typography.Title level={3}>Sign In</Typography.Title>
+            <Typography.Title level={3}>Sign Up</Typography.Title>
             <Form
               name="signup"
               initialValues={{ remember: true }}
